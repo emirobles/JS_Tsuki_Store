@@ -1,0 +1,49 @@
+body {
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-blanco-negro-lunas-estrellas_1110-353.jpg);
+    text-align: center;
+    margin: 0px;
+    font-family: 'Finlandica', sans-serif;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 0 5px purple, 0 0 5px purple, 0 0 5px purple, 0 0 5px purple;
+}
+
+h1 {
+    color: rgb(194, 167, 212);
+    margin-top: 0px;
+    background-color: rgba(204, 130, 214, 0.856);
+    padding: 20px;
+}
+
+h2 {
+    color: rgb(243, 187, 231)
+}
+
+footer {
+    background-color: #49008dab;
+    color: #e8f6f9;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+img {
+    height: 200px;
+    margin-top: 15px;
+    
+}
+
+.div-padre {
+    border: 2px solid;
+    border-radius: 6px;
+    border-color: rgb(107, 0, 128);
+    width: 300px;
+    height: 460px;
+    margin: 10px;
+    background-color: rgba(222, 86, 240, 0.767);
+}
+
+#listaDeMangas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
