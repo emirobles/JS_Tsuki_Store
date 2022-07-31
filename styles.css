@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Finlandica', sans-serif;
+    background-image: url(https://i.pinimg.com/originals/e9/7c/29/e97c29ecb80370da564c91a329035aac.jpg);
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-japanese-poster-japan-tourism-japanese-zephyr-image_16665.jpg);
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgb(223, 199, 255);
+    box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: rgb(241, 227, 253);
+    text-shadow: 0 0 5px purple, 0 0 5px purple, 0 0 5px purple, 0 0 5px purple;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+img{
+    height: 250px;
+    margin-top: 15px;
+}
+
+#boton-carrito {
+    border: none;
+    color: rgb(205, 10, 223);
+    font-size: 40px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+
+#boton-carrito:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(184, 121, 226);
+}
+
+#boton-carrito:focus {
+    outline: none;
+}
+
+#contenedor-productos {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.producto {
+    text-align: center;
+    border-radius: 10px;    
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    height: 450px;
+    margin-bottom: 20px;
+    box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+    background-color: rgba(232, 214, 247, 0.767);
+}
+
+.precioProducto {
+    font-weight: 700;
+}
+
+.boton-agregar {
+    border-radius: 6px;
+    background-color: rgb(170, 92, 221);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 6px;
+    border: none;
+}
+
+.boton-agregar:hover {
+    cursor: pointer;
+}
+
+.boton-agregar:focus {
+    outline: none;
+}
+
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-carrito {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito h3 {
+    color: rgb(188, 65, 225);
+    padding-bottom: 5px;
+}
+
+.modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: royalblue;
+    border: none;
+    background-color: white;
+}
+
+.modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+}
+
+.modal-carrito #carritoCerrar:focus {
+    outline: none;
+}
+
+.modal-carrito .precioProducto {
+    padding-top: 10px;
+
+}
+
+.productoEnCarrito {
+    border-left: 5px solid rgb(190, 173, 230);
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.productoEnCarrito:hover {
+    border-left: 5px solid rgb(161, 65, 225);
+}
+
+.boton-eliminar {
+    background-color: white;
+    color: rgb(172, 26, 106);
+    border: none;
+    font-size: 20px;
+}
+
+.boton-eliminar:hover {
+    cursor: pointer;
+}
+
+.boton-eliminar:focus {
+    outline: none;
+}
+
+footer {
+    text-align: center;
+    background-color: #49008dab;
+    color: #e8f6f9;
+    margin-top: 80px;
+    padding: 20px;
+}
