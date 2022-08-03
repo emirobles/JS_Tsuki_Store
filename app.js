@@ -31,7 +31,30 @@ class Producto {
         this.precio = producto.precio;            
     }
 }
+//---------------------------
+// Objeto a desdestructurar (manga nuevo)
+let mangaNuevo1 = {
+    id: 20,
+    nombre: "Kimetsu no Yaiba",
+    desc: "Tomo  N°23",
+    editorial: "PANINI",
+    cantidad: 1,
+    precio: 850,
+    img: "./img/KNY.jpg",
 
+}
+//Spread ocupado para armar segmento de novedades
+let novedades = {
+    ...mangaNuevo1,
+    ingreso: "15 de Agosto"    
+}
+// Desdestructuración para extraer precio del manga nuevo
+const {precio} = mangaNuevo1
+
+// Operador ternario utilizado en línea 384
+//precio > 800 ? alert("Reserva con tiempo y obten un 10% de descuento") : alert("Mantente informado sobre nuestras promociones")
+
+//---------------------------
 //Array de productos manga
 
 let stockProductos = [
@@ -292,9 +315,12 @@ const agregarAlCarrito = (prodId) => {
 
     if (existe) { // Actualiza cantidad
         const prod = carrito.map(prod => { 
-            if (prod.id === prodId) {
+            //Operador logico AND
+            prod.id === prodId && prod.cantidad++
+            //condicional original
+            /*if (prod.id === prodId) {
                 prod.cantidad++
-            }
+            }*/
         })
     } else { //Sino se agrega al carrito
         const item = stockProductos.find((prod) => prod.id === prodId)
@@ -338,3 +364,21 @@ const actualizarCarrito = () => {
 
 }
 
+//Segmento de Novedades para desestructuración
+let anuncioNovedad = document.getElementById("anuncioNovedad");
+anuncioNovedad.innerHTML += `
+        <div class = "div-padre">            
+            <h2>NUEVOS INGRESOS</h2>
+            <p>Disponible el ${novedades.ingreso}</p>
+            <div class="imagen"><img src="${novedades.img}"></div>
+            <h3>${novedades.nombre}</h3>
+            <p>${novedades.desc}</p>
+            <p>${novedades.editorial}</p>
+            <p>$${novedades.precio}</p>
+            <button id="agregar${novedades.id}" class="boton-agregar">COMPRAR <i class="fas fa-shopping-cart"></i></button>            
+        </div>
+    `
+    const boton2 = document.getElementById(`agregar${novedades.id}`)
+    boton2.addEventListener('click', () => {
+        precio > 800 ? alert("Reserva con tiempo y obten un 10% de descuento") : alert("Mantente informado sobre nuestras promociones")
+    })
