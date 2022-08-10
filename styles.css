@@ -6,8 +6,9 @@
 
 body {
     font-family: 'Finlandica', sans-serif;
-    background-image: url(https://i.pinimg.com/originals/e9/7c/29/e97c29ecb80370da564c91a329035aac.jpg);
+    background-image: url(https://i.pinimg.com/originals/44/38/67/443867325f041e299cd7fc609898c7e6.png);
     background-size: cover;
+    
 }
 
 img {
@@ -16,6 +17,7 @@ img {
 }
 
 header {
+    margin-top: 0px;
     position: fixed;
     width: 100%;
     display: flex;
@@ -27,6 +29,9 @@ header {
     box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
 }
+
+/* https: //i.pinimg.com/originals/e9/7c/29/e97c29ecb80370da564c91a329035aac.jpg */
+/* https://i.pinimg.com/originals/44/38/67/443867325f041e299cd7fc609898c7e6.png */
 
 h1 {
     color: rgb(241, 227, 253);
@@ -43,9 +48,9 @@ img{
 
 #boton-carrito {
     border: none;
-    color: rgb(205, 10, 223);
+    color: rgb(184, 108, 228);
     font-size: 40px;
-    background-color: white;
+    background-color: rgb(255, 237, 189);
     box-shadow: 0 0 5px #f391ee;
     border-radius: 50%;
     padding: 10px 20px;
@@ -70,9 +75,19 @@ img{
     flex-wrap: wrap;
 }
 
+
 #filtroEditorial {
     margin-top: 150px;
+    margin-left: 50px;
+    padding: 6px;
+    color: #f822ed;
+    font-size: 18px;
+    border-radius: 6px;
+    border-color: blueviolet;
+    background-color: #ffefff;
+    font-family: 'Finlandica', sans-serif;
 }
+
 
 p {
     line-height: 1.8;
@@ -231,3 +246,9 @@ img{
     flex-wrap: wrap;
     justify-content: center;
 }
+
+#contadorCarrito {
+    font-size: 25px;
+    color: #f822ed;
+}
+
