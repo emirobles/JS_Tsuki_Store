@@ -30,9 +30,6 @@ header {
     margin-bottom: 20px;
 }
 
-/* https: //i.pinimg.com/originals/e9/7c/29/e97c29ecb80370da564c91a329035aac.jpg */
-/* https://i.pinimg.com/originals/44/38/67/443867325f041e299cd7fc609898c7e6.png */
-
 h1 {
     color: rgb(241, 227, 253);
     text-shadow: 0 0 5px purple, 0 0 5px purple, 0 0 5px purple, 0 0 5px purple;
@@ -75,7 +72,6 @@ img{
     flex-wrap: wrap;
 }
 
-
 #filtroEditorial {
     margin-top: 150px;
     margin-left: 50px;
@@ -87,7 +83,6 @@ img{
     background-color: #ffefff;
     font-family: 'Finlandica', sans-serif;
 }
-
 
 p {
     line-height: 1.8;
