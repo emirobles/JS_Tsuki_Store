@@ -364,6 +364,7 @@ const actualizarCarrito = () => {
 
 }
 
+
 //Segmento de Novedades para desestructuración
 let anuncioNovedad = document.getElementById("anuncioNovedad");
 anuncioNovedad.innerHTML += `
@@ -378,20 +379,21 @@ anuncioNovedad.innerHTML += `
             <button id="agregar${novedades.id}" class="boton-agregar">COMPRAR <i class="fas fa-shopping-cart"></i></button>            
         </div>
     `
-    const boton2 = document.getElementById(`agregar${novedades.id}`)
-    boton2.addEventListener('click', () => {
-        precio > 800 ? Swal.fire({
-            title: 'Encarga antes de la fecha de ingreso y consigue un 10% de descuento',
-            width: 600,
-            padding: '3em',
-            color: '#716add',
-            background: '#fff url(https://www.feathr.com/wp-content/uploads/FE24606-white-silver-metallic-bamboo-wallpaper-PatternImageLo.jpg)',
-            backdrop: ` 
+const boton2 = document.getElementById(`agregar${novedades.id}`)
+boton2.addEventListener('click', () => {
+    precio > 800 ? Swal.fire({
+        title: 'Encarga antes de la fecha de ingreso y consigue un 10% de descuento',
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        background: '#fff url(https://www.feathr.com/wp-content/uploads/FE24606-white-silver-metallic-bamboo-wallpaper-PatternImageLo.jpg)',
+        backdrop: ` 
                 rgba(0,0,123,0.4)
                 url("https://i.pinimg.com/originals/3b/7a/8e/3b7a8e44729879cd45e281cc8d3e3a54.gif")                
                 right bottom
                 no-repeat                
             `
-        }) : Swal.fire('Mantente informado sobre nuestras promociones')
-    })
+    }) : Swal.fire('Mantente informado sobre nuestras promociones')
+})
+
 
